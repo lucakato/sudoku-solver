@@ -9,8 +9,22 @@
     box-sizing: border-box;
     border-spacing: 0;
     border: 1px grey solid;
+    border-color:lightcoral;
 }
 
 .odd-section {
-    background-color: lightgrey;
+    background-color: rgb(222, 188, 252);
+}
+
+#solve-button {
+    background-color:darkcyan;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+#solve-button:hover {
+    background-color:blueviolet 
 }
