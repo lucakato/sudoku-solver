@@ -29,4 +29,4 @@ app.post("/solve", (req,res) => { // Express syntax
     });
 })
 
-app.listen(PORT, () => console.log("Server listening on PORT ${PORT}"))
+app.listen(PORT, () => console.log('Server listening on PORT ${PORT}'))

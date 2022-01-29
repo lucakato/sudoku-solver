@@ -23,6 +23,7 @@ for (let i = 0; i < squares; i++){
     puzzleBoard.appendChild(inputElement)
 }
 
+// Find each value on the board and put it into an array
 const findValues = () => {
     const inputs = document.querySelectorAll("input")
     inputs.forEach(input => {
@@ -36,6 +37,7 @@ const findValues = () => {
     console.log(submission)
 }
 
+// A function to populate Sudoku board
 const populateValues = (isSolvable, solution) => {
     const inputs = document.querySelectorAll('input')
     if (isSolvable && solution){
@@ -56,6 +58,7 @@ const solve = () => {
     console.log("data", data)
 
     // Allows request to RapidAPI to be done in the backend
+    // Visit URL below as a POST request
     fetch("http://localhost:8000/solve", {
         method: 'POST',
         header: {
@@ -66,6 +69,7 @@ const solve = () => {
     })  .then(response => response.json())
         .then(data => {
             console.log(data)
+            // Put the solution onto the Sudoku board with data returned back to us
             populateValues(data.solvable, data.solution)
             submission = []
         })
